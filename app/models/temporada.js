@@ -2,13 +2,13 @@ var mongoose = require('mongoose');
  
 var TemporadaSchema = new mongoose.Schema({
     CodigoTemporada: {
-        type: number
+        type: Number
     },
     NombreTemporada:{
     	type:string
     },
     CodigoAgricultor:{
-        type:number
+        type:Number
     }
  
 }, {
