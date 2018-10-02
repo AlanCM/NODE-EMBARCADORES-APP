@@ -10,8 +10,8 @@ module.exports = function(app){
     temporadasRoutes.get('/', TemporadasController.getTemporadas);
    // caseRoutes.post('/', requireAuth, AuthenticationController.roleAuthorization(['reader','creator','editor','Agricultor','Administrador']), CaseController.createCase);
    // caseRoutes.delete('/:cases_id', requireAuth, AuthenticationController.roleAuthorization(['reader','creator','editor','Agricultor','Administrador']), CaseController.deleteCase);
-
-    // Set up routes
+    
+   // Set up routes
     app.use('/api', apiRoutes);
  
 }
