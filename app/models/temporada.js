@@ -5,7 +5,7 @@ var TemporadaSchema = new mongoose.Schema({
         type: Number
     },
     NombreTemporada:{
-    	type:string
+    	type:String
     },
     CodigoAgricultor:{
         type:Number
