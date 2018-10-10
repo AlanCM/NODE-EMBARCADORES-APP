@@ -7,7 +7,7 @@ var jProductos;
 console.log('productos sync');
 var fecha = 'FechaModificacion=20180316';
 var options = {
-    host: 'http://appembarcadores.tripleh.com.mx',
+    host: 'appembarcadores.tripleh.com.mx',
     path: '/Default.aspx/api/Embarques?Catalogo=Producto&' + fecha
 };
 
