@@ -18,13 +18,13 @@ callback = function(response){
 
     response.on('end',function(){
         jProductos = JSON.parse(jsonStr);
-        jsonStr = '';
+        //jsonStr = '';
         // insertar registros
         MongoClient.connect(url,function(err,client){
             console.log('conectando a db');
             var db = client.db('heroku_1nkkr2b2');
             var collection = db.collection('productos');
-            collection.insertMany(jProductos,function(err,result){
+            collection.insertMany(jsonStr,function(err,result){
                 console.log('datos guardados!');
                 //client.close();
                 //mongodb://heroku_1nkkr2b2:ttl665upn2sio1fgcoajg6db1j@ds121163.mlab.com:21163/heroku_1nkkr2b2
