@@ -20,12 +20,12 @@ callback = function(response){
         jProductos = JSON.parse(jsonStr);
         jsonStr = '';
         // insertar registros
-        MongoClient.connect(url,function(err,db){
+        MongoClient.connect(url,function(err,client){
             console.log('conectando a db');
-            var collection = db.collection('productos');
+            var collection = client.db.collection('productos');
             collection.insertMany(jProductos,function(err,result){
                 console.log('datos guardados!');
-                db.close();
+                client.db.close();
             });
         });
     });
