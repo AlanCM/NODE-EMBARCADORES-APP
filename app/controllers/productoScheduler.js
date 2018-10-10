@@ -26,7 +26,7 @@ callback = function(response){
             console.log('conectando a db');
             var db = client.db('heroku_1nkkr2b2');
             var collection = db.collection('productos');
-            collection.insertMany(jsonStr,function(err,result){
+            collection.insertMany(jProductos,function(err,result){
                 assert.equal(err, null);
                 console.log('datos guardados!');
                 client.close();
