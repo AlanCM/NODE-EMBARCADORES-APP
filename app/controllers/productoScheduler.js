@@ -1,5 +1,6 @@
 var http = require('http');
 var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
 // Base de datos
 var url = process.env.MONGODB_URI;
 var jsonStr = '';
@@ -25,6 +26,7 @@ callback = function(response){
             var db = client.db('heroku_1nkkr2b2');
             var collection = db.collection('productos');
             collection.insertMany(jsonStr,function(err,result){
+                assert.equal(err, null);
                 console.log('datos guardados!');
                 client.close();
                 //mongodb://heroku_1nkkr2b2:ttl665upn2sio1fgcoajg6db1j@ds121163.mlab.com:21163/heroku_1nkkr2b2
