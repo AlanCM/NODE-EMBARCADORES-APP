@@ -18,6 +18,7 @@ callback = function(response){
     });
 
     response.on('end',function(){
+        console.log(jsonStr);
         jProductos = JSON.parse(jsonStr);
         //jsonStr = '';
         // insertar registros
