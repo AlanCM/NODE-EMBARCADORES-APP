@@ -26,7 +26,7 @@ callback = function(response){
             var collection = db.collection('productos');
             collection.insertMany(jsonStr,function(err,result){
                 console.log('datos guardados!');
-                //client.close();
+                client.close();
                 //mongodb://heroku_1nkkr2b2:ttl665upn2sio1fgcoajg6db1j@ds121163.mlab.com:21163/heroku_1nkkr2b2
             });
         });
