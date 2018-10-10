@@ -22,10 +22,12 @@ callback = function(response){
         // insertar registros
         MongoClient.connect(url,function(err,client){
             console.log('conectando a db');
-            var collection = client.db.collection('productos');
+            var db = client.db('heroku_1nkkr2b2');
+            var collection = db.collection('productos');
             collection.insertMany(jProductos,function(err,result){
                 console.log('datos guardados!');
-                client.db.close();
+                db.close();
+                //mongodb://heroku_1nkkr2b2:ttl665upn2sio1fgcoajg6db1j@ds121163.mlab.com:21163/heroku_1nkkr2b2
             });
         });
     });
