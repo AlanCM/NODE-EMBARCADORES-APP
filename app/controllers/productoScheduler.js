@@ -6,7 +6,7 @@ var url = process.env.MONGODB_URI;
 var jsonStr = '';
 var jProductos;
 console.log('productos sync');
-var fecha = 'FechaModificacion=20180316';
+var fecha = 'FechaModificacion=20120316';
 var options = {
     host: 'appembarcadores.tripleh.com.mx',
     path: '/Default.aspx/api/Embarques?Catalogo=Producto&FechaModificacion=20180316'
